@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysBusinessRelations xmlns="http://www.sgcc.com.cn/esr"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sgcc.com.cn/esr/bpm dynSysInterface.xsd ">
+	<platform>BPM</platform>
+	<!--每个sysBusinessRelation为一个集成关系-->
+	<sysBusinessRelation>
+		<!--集成编码/ID,可为空 -->
+		<relationCode>relationCode11</relationCode>
+		<!--集成名,可为空 -->
+		<relationName>人力系统与财务系统的集成</relationName>
+		<!--服务名称,可为空 -->
+		<serviceName>findUsers</serviceName>
+		<!--服务调用地址,可为空 -->
+		<invokeServiceUrl>http://10.10.4.56:8989/res/users.do</invokeServiceUrl>
+		<!--集成场景,可为空 -->
+		<scene>描述人员财务结算流程</scene>
+		<!--集成方式,可为空 -->
+		<relationType>bpm01</relationType>
+		<!--生产业务系统编码/ID,可为空 -->
+		<productCode>hrsystem01</productCode>
+		<!--生产业务系统名称,可为空 -->
+		<productName>人力系统</productName>
+		<!--消费业务系统编码/ID,可为空 -->
+		<consumeCode></consumeCode>
+		<!--消费业务系统名称,可为空 -->
+		<consumeName>finance</consumeName>
+		<!-- 集成服务器,可为空 -->
+		<relationServer>esb01服务器</relationServer>
+		<!-- 集成描述,可为空 -->
+		<relationDesc>人力资源与财务的集成</relationDesc>
+		<!-- 集成输入描述,可为空 -->
+		<relationInputDesc></relationInputDesc>
+		<!-- 集成输出描述,可为空 -->
+		<relationOutputDesc></relationOutputDesc>
+		<!-- 扩展字段,可为空 -->
+		<extend1></extend1>
+		<!-- 扩展字段,可为空 -->
+		<extend2></extend2>
+		<!-- 通路通信频率,可为空 -->
+		<communicateCounts>
+			<!-- 采集周期 -->
+			<period></period>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>10</allCount>
+				<!-- 失败次数 -->
+				<failedCount>1</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+			<!-- 单个通信详情 -->
+			<communicate>
+				<!-- 时间 -->
+				<time></time>
+				<!-- 总次数 -->
+				<allCount>12</allCount>
+				<!-- 失败次数 -->
+				<failedCount>3</failedCount>
+				<!-- 平均响应时间 -->
+				<averageResponseTime></averageResponseTime>
+				<!-- 最小响应时间 -->
+				<minResponseTime></minResponseTime>
+				<!-- 最大响应时间 -->
+				<maxResponseTime></maxResponseTime>
+			</communicate>
+		</communicateCounts>
+	</sysBusinessRelation>
+	
+</sysBusinessRelations>

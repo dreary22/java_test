@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysBusinessRelations xmlns="http://www.sgcc.com.cn/esr"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sgcc.com.cn/esr dynSysInterface.xsd ">
+	<platform>platform</platform>
+</sysBusinessRelations>

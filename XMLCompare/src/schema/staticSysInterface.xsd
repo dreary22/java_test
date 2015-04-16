@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sgcc.com.cn/esr"
+	xmlns:tns="http://www.sgcc.com.cn/esr" elementFormDefault="qualified">
+	<annotation>
+		<appinfo>esr2.1</appinfo>
+		<documentation>
+			EAS接入企业服务资源库全景视图接口规范schema
+		</documentation>
+	</annotation>
+
+	<!--数据来源:EAS,必填 -->
+	<element name="platform">
+		<simpleType>
+			<restriction base="string">
+				<minLength value="1" />
+			</restriction>
+		</simpleType>
+	</element>
+	<!--集成编码/ID,必填-->
+	<element name="relationCode" type="string"></element>
+	<!--集成名,必填 -->
+	<element name="relationName" type="string"></element>
+	<!--集成场景,可为空 -->
+	<element name="scene" type="string"></element>
+	<!--集成方式,必填 -->
+	<element name="relationType" type="string"></element>
+	<!--生产业务系统ID,必填 -->
+	<element name="productGUID">
+		<simpleType>
+			<restriction base="string">
+				<minLength value="1" />
+			</restriction>
+		</simpleType>
+	</element>
+	<!-- 生产业务系统编码,可为空 -->
+	<element name="productCode" type="string"></element>
+	<!--生产业务系统名称,可为空 -->
+	<element name="productName" type="string"></element>
+	<!--消费业务系统ID,必填 -->
+	<element name="consumeGUID">
+		<simpleType>
+			<restriction base="string">
+				<minLength value="1" />
+			</restriction>
+		</simpleType>
+	</element>
+	<!-- 消费业务系统编码,可为空 -->
+	<element name="consumeCode" type="string"></element>
+	<!--消费业务系统名称,可为空 -->
+	<element name="consumeName" type="string"></element>
+
+	<!--每个sysBusinessRelation为一个集成关系 -->
+	<element name="sysBusinessRelation">
+		<complexType>
+			<sequence>
+				<element ref="tns:relationCode" />
+				<element ref="tns:relationName" />
+				<element ref="tns:scene" />
+				<element ref="tns:relationType" />
+				<element ref="tns:productCode" />
+				<element ref="tns:productName" />
+				<element ref="tns:consumeCode" />
+				<element ref="tns:consumeName" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="sysBusinessRelations">
+		<complexType>
+			<sequence>
+				<element ref="tns:platform" />
+				<element ref="tns:sysBusinessRelation" minOccurs="0"
+					maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+</schema>

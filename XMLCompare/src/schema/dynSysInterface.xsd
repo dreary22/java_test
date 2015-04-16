@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sgcc.com.cn/esr/bpm"
+	xmlns:tns="http://www.sgcc.com.cn/esr/bpm" elementFormDefault="qualified">
+	<annotation>
+		<appinfo>esr2.1</appinfo>
+		<documentation>
+			外部系统接入企业服务资源库全景视图接口规范schema
+		</documentation>
+	</annotation>
+	
+	<!--数据来源:bpm or etl,必填 -->
+	<element name="platform">
+		<simpleType>
+			<restriction base="string">
+				<minLength value="1" />
+			</restriction>
+		</simpleType>
+	</element>
+	<!--集成编码/ID,可为空 -->
+	<element name="relationCode" type="string"></element>
+	<!--集成名,可为空 -->
+	<element name="relationName" type="string"></element>
+	<!--服务名称,可为空 -->
+	<element name="serviceName" type="string"></element>
+	<!--服务调用地址,可为空 -->
+	<element name="invokeServiceUrl" type="string"></element>
+	<!--集成场景,可为空 -->
+	<element name="scene" type="string"></element>
+	<!--集成方式,可为空 -->
+	<element name="relationType" type="string"></element>
+	<!--生产业务系统编码/ID,可为空 -->
+	<element name="productCode"></element>
+	<!--生产业务系统名称,可为空 -->
+	<element name="productName" type="string"></element>
+	<!--消费业务系统编码/ID,可为空 -->
+	<element name="consumeCode" type="string"></element>
+	<!--消费业务系统名称,可为空 -->
+	<element name="consumeName" type="string"></element>
+	<!-- 集成服务器,可为空 -->
+	<element name="relationServer" type="string"></element>
+	<!-- 集成描述,可为空 -->
+	<element name="relationDesc" type="string"></element>
+	<!-- 集成输入描述,可为空 -->
+	<element name="relationInputDesc" type="string"></element>
+	<!-- 集成输出描述,可为空 -->
+	<element name="relationOutputDesc" type="string"></element>
+	
+	<!-- 扩展字段1 -->
+	<element name="extend1" type="string"></element>
+	<!-- 扩展字段2 -->
+	<element name="extend2" type="string"></element>
+	
+	<!-- 采集周期 -->
+	<element name="period" type="string"></element>
+	<!-- 采集时间 -->
+	<element name="time" type="string"></element>
+	<!-- 总次数 -->
+	<element name="allCount" type="long"></element>
+	<!-- 失败次数 -->
+	<element name="failedCount" type="long"></element>
+	<!-- 平均响应时间 -->
+	<element name="averageResponseTime" type="string"></element>
+	<!-- 最小响应时间 -->
+	<element name="minResponseTime" type="string"></element>
+	<!-- 最大响应时间 -->
+	<element name="maxResponseTime" type="string"></element>
+	
+	<element name="communicate">
+		<complexType>
+			<sequence>
+				<element ref="tns:time"/>
+				<element ref="tns:allCount"/>
+				<element ref="tns:failedCount"/>
+				<element ref="tns:averageResponseTime"/>
+				<element ref="tns:minResponseTime"/>
+				<element ref="tns:maxResponseTime"/>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="communicateCounts">
+		<complexType>
+			<sequence>
+				<element ref="tns:period"/>
+				<element ref="tns:communicate" minOccurs="12" maxOccurs="12"/>
+			</sequence>
+		</complexType>
+	</element>
+
+	<!--每个sysBusinessRelation为一个集成关系 -->
+	<element name="sysBusinessRelation">
+		<complexType>
+			<sequence>
+				<element ref="tns:relationCode" />
+				<element ref="tns:relationName" />
+				<element ref="tns:serviceName" />
+				<element ref="tns:invokeServiceUrl" />
+				<element ref="tns:scene" />
+				<element ref="tns:relationType" />
+				<element ref="tns:productCode" />
+				<element ref="tns:productName" />
+				<element ref="tns:consumeCode" />
+				<element ref="tns:consumeName" />
+				<element ref="tns:relationServer" />
+				<element ref="tns:relationDesc" />
+				<element ref="tns:relationInputDesc" />
+				<element ref="tns:relationOutputDesc" />
+				<element ref="tns:extend1"/>
+				<element ref="tns:extend2"/>
+				<element ref="tns:communicateCounts" minOccurs="0" maxOccurs="1"/>
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="sysBusinessRelations">
+		<complexType>
+			<sequence>
+				<element ref="tns:platform" />
+				<element ref="tns:sysBusinessRelation" minOccurs="0"
+					maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+</schema>

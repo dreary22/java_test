@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sysBusinessRelations xmlns="http://www.sgcc.com.cn/esr"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sgcc.com.cn/esr dynSysInterface.xsd ">
+	<platform>platform</platform>
+	<sysBusinessRelation>
+		<relationCode>relationCode11</relationCode>
+		<relationName>人力系统与财务系统的集成</relationName>
+		<serviceName>findUsers</serviceName>
+		<invokeServiceUrl>http://10.10.4.56:8989/res/users.do</invokeServiceUrl>
+		<scene>描述人员财务结算流程</scene>
+		<relationType>bpm01</relationType>
+		<productCode>hrsystem01</productCode>
+		<productName>人力系统</productName>
+		<consumeCode></consumeCode>
+		<consumeName>finance</consumeName>
+		<relationServer>esb01服务器</relationServer>
+		<relationDesc>人力资源与财务的集成</relationDesc>
+		<relationInputDesc></relationInputDesc>
+		<relationOutputDesc></relationOutputDesc>
+	</sysBusinessRelation>
+</sysBusinessRelations>
